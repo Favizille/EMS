@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ExamController;
+use App\Http\Controllers\ResultController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,9 @@ Route::post('/exam/create', [ExamController::class, 'createExam']);
 Route::get('exam/{examId}', [ExamController::class, 'getExam']);
 Route::put('/exam/update/{examId}', [ExamController::class, 'updateExam']);
 Route::delete('/exam/delete/{examId}', [ExamController::class, 'deleteExam']);
+
+// Result Route
+Route::post('/result/create', [ResultController::class, 'createResult']);
+Route::get('result/{examId}', [ResultController::class, 'getResult']);
+Route::put('/result/{examId}', [ResultController::class, 'updateResult']);
+Route::delete('result/delete/{examId}', [ResultController::class, 'deleteResult']);
